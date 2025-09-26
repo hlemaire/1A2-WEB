@@ -22,6 +22,7 @@ body {
 	padding: 8px;
 	box-sizing: border-box;
 	padding-top: var(--nav-size);
+	margin-top: 24px;
 }
 
 .surface {
@@ -59,18 +60,26 @@ body {
 
 .navigation-bar {
 	left: 0;
+	right: 0;
 	top: 0;
-	width: 100%;
 	position: fixed;
 	height: var(--nav-size);
 	background-color: var(--c-background);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding: 10px;
-	box-sizing: border-box;
+	margin: 16px;
+	padding: 8px;
+	border-radius: 16px;
 	justify-content: space-between;
 	box-shadow: 0px 0px 4px var(--c-light);
+}
+
+.navigation-bar > h1 {
+	background: var(--c-surface);
+	color: var(--c-surface-txt);
+	padding: 8px;
+	border-radius: 16px;
 }
 
 .liste_cours {
@@ -89,7 +98,12 @@ body {
 	display: flex;
 	flex-direction: row;
 	gap: 8px;
+}
 
+.media-list > a {
+	background: var(--c-surface);
+	padding: 8px;
+	border-radius: 16px;
 }
 
 header img {
