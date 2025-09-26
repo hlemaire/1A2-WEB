@@ -26,6 +26,12 @@ body {
 	position: fixed;
 	height: 64px;
 	background-color: var(--c-surface);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+	box-sizing: border-box;
+	justify-content: space-between;
 }
 
 .liste_cours {
