@@ -1,7 +1,9 @@
 :root {
-	--c-background: #888;
-	--c-surface: #AAA;
-	--c-txt: #000;
+	--c-background: #001b40;
+	--c-surface: #fff;
+	--c-light: #00EAFF;
+	--c-txt: #FFF;
+	--c-surface-txt: #000;
 }
 
 html {
@@ -14,28 +16,44 @@ body {
 	padding: 0px;
 }
 
-.image_band img {
+.surface {
+	color: var(--c-surface-txt);
 	background: var(--c-surface);
-	width: 100%;
-	height: fit-content;
-	background-size: cover;
 }
 
 .navigation-bar {
 	width: 100%;
 	position: fixed;
 	height: 64px;
-	background-color: var(--c-surface);
+	background-color: var(--c-background);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	padding: 10px;
 	box-sizing: border-box;
 	justify-content: space-between;
+	box-shadow: 0px 0px 4px var(--c-light);
 }
 
 .liste_cours {
 	display: flex;
 	flex-direction: column;
+}
+
+.logo-header > img {
+	width: 48px;
+	height: 48px;
+}
+
+.media-list {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+
+}
+
+header img {
+	width: 32px;
+	height: 32px;
 }
 
