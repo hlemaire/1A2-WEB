@@ -1,0 +1,35 @@
+:root {
+	--c-background: #888;
+	--c-surface: #AAA;
+	--c-txt: #000;
+}
+
+html {
+	color: var(--c-txt);
+	background: var(--c-background);
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.image_band img {
+	background: var(--c-surface);
+	width: 100%;
+	height: fit-content;
+	background-size: cover;
+}
+
+.navigation-bar {
+	width: 100%;
+	position: fixed;
+	height: 64px;
+	background-color: var(--c-surface);
+}
+
+.liste_cours {
+	display: flex;
+	flex-direction: column;
+}
+
