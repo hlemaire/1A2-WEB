@@ -46,7 +46,7 @@ body {
 	background: var(--c-surface);
 	width: 50%;
 	color: var(--c-surface-txt);
-	align-content: center;
+	align-content: center;	
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
@@ -122,3 +122,34 @@ header img {
 	height: 32px;
 }
 
+#image-carousel {
+	border-radius: 16px;
+	margin: 8px;
+	background-color: var(--c-surface);
+	color: var(--c-surface-txt);
+}
+
+#image-carousel > div > ul {
+	padding: 8px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	list-style: none;
+}
+
+#image-carousel > div > ul > li {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#image-carousel > div > ul > li > h4 {
+	width: fit-content;
+}
+
+footer {
+	background-color: var(--c-surface-txt);
+	color: var(--c-txt);
+	width: 100%;
+	left: 0px;
+	position: absolute;
+}
