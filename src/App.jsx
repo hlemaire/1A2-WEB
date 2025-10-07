@@ -1,15 +1,13 @@
 //Ajoute le composant "par defaut" de Button.tsx en tant que "Button"
-import Button from './components/Button'
+import Home from './pages/Home'
+
+
 
 function App() {
-
+  //Tu met ici tout tes éléments "Pages" dans ./pages
   return (
     <>
-      <div>
-        <Button name="coucou"></Button>
-        <Button name="ceci est une propriété !"></Button>
-        <h1>Site de l'ESGI !</h1>
-      </div>
+      <Home></Home>
     </>
   )
 }
