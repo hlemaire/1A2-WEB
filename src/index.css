@@ -1,0 +1,77 @@
+:root {
+    /*Spaces
+    -Small
+    -Medium
+    -Large
+    -Super Large
+    */
+    --sp-sm: 8px;
+    --sp-md: 16px;
+    --sp-la: 32px;
+    --sp-xl: 48px;
+
+    /*Colors = https://coolors.co/palette/3b4956-34414c-2e3943-273139-212930-1a2026-14181d-0d1013-07080a-000000
+    Background
+    Text
+    Surface
+    */
+    --c-bg: #07080a;
+    --c-txt: #FFF;
+    --c-surface: #0d1013;
+    
+    /*Borders
+    Surface
+    */
+    --bd-surface: solid 1px #3B495688;
+
+    /*Border Radiuses
+    Interactive = to click
+    Solid = cannot click
+    */
+    --br-int: 16px;
+    --br-sol: 8px;
+
+    /*Fixed size*/
+    --size-nav: 64px;
+}
+
+html {
+    background-color: var(--c-bg);
+    color: var(--c-txt);
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    padding: var(--sp-la);
+    margin-top: var(--size-nav);
+    box-sizing: border-box;
+}
+
+h1,h2,p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 12px;
+    }
+    
+}

@@ -1,3 +1,5 @@
+import Surface from "./Surface";
+
 function NavBar() {
     return (
         <>
@@ -5,7 +7,9 @@ function NavBar() {
                 //On utilise className a la place de class en react
             }
             <nav className="nav-bar">
-                <h1>Site de l'ESGI</h1>
+                <Surface style={{width:'100%', height:'100%', display:'flex', alignItems:'center'}}>
+                    <h1>Site Web Officiel 1A2 ESGI</h1>
+                </Surface>
             </nav>
         </>
     )

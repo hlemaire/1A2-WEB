@@ -1,2 +1,37 @@
-#root {
+.nav-bar {
+    position: fixed;
+    top: var(--sp-md);
+    left: var(--sp-md);
+    right: var(--sp-md);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: var(--size-nav);
+}
+
+.surface {
+    width: fit-content;
+    border-radius: var(--br-sol);
+    background-color: var(--c-surface);
+    padding: var(--sp-md);
+    border: var(--bd-surface);
+    box-sizing: border-box;
+}
+
+.space {
+    height: var(--sp-md);
+}
+
+.space-sm {
+    height: var(--sp-sm);
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.calendar > .date {
+    flex: 0 1 auto;
 }
