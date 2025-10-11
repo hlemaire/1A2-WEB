@@ -21,7 +21,7 @@ function csvToJson(csvText) {
 
 function Home() {
 
-    
+
     const [data, setData] = useState(null);
     function fetchData() {
     fetch(sheetUrl)
@@ -53,7 +53,13 @@ function Home() {
                 <h1>Prochaines évaluations : </h1>
                 <div className="space-sm"></div>
                 <Calendar data={data}></Calendar>
-                </Surface>
+            </Surface>
+            <div className="space"></div>
+            
+            <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'1rem'}}>
+                <Surface style={{width:'100%'}}></Surface>
+                <Surface style={{width:'100%'}}></Surface>
+            </div>
         </body>
     )
 }

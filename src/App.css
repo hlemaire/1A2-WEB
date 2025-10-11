@@ -28,11 +28,7 @@
 }
 
 .calendar {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
     gap: 1rem;
-}
-
-.calendar > .date {
-    flex: 0 1 auto;
 }
