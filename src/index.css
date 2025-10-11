@@ -24,6 +24,11 @@
     */
     --bd-surface: solid 1px #3B495688;
 
+
+    /*Shadows
+    */
+    --shw-surface: 0 2px 2px 0px #3B4956;
+
     /*Border Radiuses
     Interactive = to click
     Solid = cannot click

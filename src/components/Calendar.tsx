@@ -22,15 +22,21 @@ function Calendar(props: propsCalendar) {
     
     const data:Array<{ [key: string]: string | undefined}> = props.data;
     let dates:Array<{date:string, label:string}> = [];
+    console.log(data);
 
     if (data != null) {
-        dates = Object.entries(data[0])
-        .filter(([key, value]) => key !== "Controles")
-        .map(
-            ([key, value]) => ({
-                date: value ?? "",
-                label: key ?? ""
+        data.map((value, column) => {
+            let date_parse: { date: string; label: string } = { date: "", label: "" };
+            Object.entries(value).forEach(([key, content]) => {
+                if (key == "Controle") {
+                    date_parse.label = content ?? "";
+                }
+                else if (key == "Date") {
+                    date_parse.date = content ?? "";
+                }
             })
+            dates.push(date_parse);
+            }
         )
     }
     

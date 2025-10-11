@@ -16,6 +16,7 @@
     padding: var(--sp-md);
     border: var(--bd-surface);
     box-sizing: border-box;
+    box-shadow: var(--shw-surface);
 }
 
 .space {
