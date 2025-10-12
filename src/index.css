@@ -18,6 +18,8 @@
     --c-bg: #07080a;
     --c-txt: #FFF;
     --c-surface: #0d1013;
+    --c-primary: #00EAFF;
+    --c-secondary: #FFDE00;
     
     /*Borders
     Surface
@@ -27,7 +29,7 @@
 
     /*Shadows
     */
-    --shw-surface: 0 2px 2px 0px #3B4956;
+    --shw-surface: 0 2px 2px 0px #3B495688;
 
     /*Border Radiuses
     Interactive = to click
@@ -50,6 +52,7 @@ body {
     padding: var(--sp-la);
     margin-top: var(--size-nav);
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 h1,h2,p {
@@ -68,7 +71,15 @@ p {
     font-size: 16px;
 }
 
-@media (max-width: 768px) {
+a {
+    color: var(--c-primary);
+}
+
+a:visited {
+    color: var(--c-secondary);
+}
+
+@media (max-width: 720px) {
     h1 {
         font-size: 32px;
     }

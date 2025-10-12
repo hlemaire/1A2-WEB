@@ -5,7 +5,7 @@ type propsButton = {
 
 function Button(props: propsButton) {
     return (
-        <button onClick={props.clickFunction}>
+        <button onClick={props.clickFunction} style={{height:'fit-content'}}>
             <h1>{props.name}</h1>
         </button>
     )

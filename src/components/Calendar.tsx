@@ -1,5 +1,6 @@
 import Icon from "./Icon";
 import Surface from "./Surface";
+import {parseTable} from '../autoloads/Database'
 
 type propsCalendar = {
     data: Array<{ [key: string]: string | undefined}> ;
@@ -13,40 +14,20 @@ type propsDate = {
 
 function Date(props: propsDate) {
     return (
-        <Surface style={{width:'100%', display:'flex',
+        <Surface style={{width:'fit-content', display:'flex',
         flexDirection:'row', justifyContent:'space-between',
-        alignItems:'center'
+        alignItems:'center', gap:'var(--sp-sm)'
         }}>
             <div>
                 <h2>{props.label}</h2>
                 <p>{props.date}</p>
             </div>
-            
             {props.link &&
             <a href={props.link} style={{width:'fit-content', height:'fit-content'}}>
-                <Icon url="/icons/document_search.svg" background="#fff" size="48px"></Icon>
+                <Icon url="/icons/document_search.svg" background="#fff" size="32px"></Icon>
             </a>}
         </Surface>
     )
-}
-
-function parseTable(data:Array<{ [key: string]: string | undefined}>, columns:Array<string>) {
-    let result:Array<Array<string>> = [];
-        if (data != null) {
-            data.map((value, column) => {
-                let parsed:Array<string> = [];
-                Object.entries(value).forEach(([key, content]) => {
-                    columns.forEach((column_name) => {
-                        if (key==column_name) {
-                            parsed.push(content ?? "");
-                        }
-                    })
-                })
-                result.push(parsed);
-            }
-        )
-    }
-    return result;
 }
 
 function Calendar(props: propsCalendar) {
@@ -66,7 +47,7 @@ function Calendar(props: propsCalendar) {
             {
             dates.map((date, index) => (
             <Date label={date.label} date={date.date} link={date.link} key={index}></Date>
-))
+            ))
             }
         </div>
     )
